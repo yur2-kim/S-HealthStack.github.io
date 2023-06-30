@@ -271,9 +271,6 @@ The table shows available features for each role.
     <td style="text-align: center;">If study creator</td>
     <td style="text-align: center;">If study creator</td>
   </tr>
-  <tr>
-    <td colspan="6">* The portal UI for this feature is complete, but the backend code wasn't completed in time to be included in the beta version.</td>
-  </tr>
 </table>
 
 
