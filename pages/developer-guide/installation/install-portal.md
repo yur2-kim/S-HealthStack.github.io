@@ -5,8 +5,6 @@ permalink: install-portal.html
 toc: false
 ---
 
-{% include warning.html title="Warning" content="Documentation for v1.0 official release is currently under construction. Note that the information on this page may be outdated." %}
-
 Follow these instructions to install, build, and verify the web portal.
 
 > This installation requires successful prior completion of the [backend system installation](install-backend.md).
@@ -35,13 +33,19 @@ Follow these instructions to install, build, and verify the web portal.
    | PUBLIC_PATH | Path will be used to host the app. For example, to host the frontend on [https://example.com/open-source/portal](https://example.com/open-source/portal){:target="_blank"} it should be set to '/open-source/portal'. | /             |
 
 2. Build `Dockerfile` with desired variables provided as build arguments. For example,
-   ```
-   docker build . \
-       -t open-source-portal \
-       --build-arg API_URL='https://example.com' \
-       --build-arg PUBLIC_PATH='/portal'
-   ```
-   The resulting Docker image runs nginx on port `80`.
+
+(You may note from swagger in the backend-system -> platform the use of port `3030`, with `api` as the path:
+```
+servers:
+  - url: "http://localhost:3030/api"
+    description: Local server
+paths:
+  /api:
+```
+
+<!-- this is where we left off with testing -->
+
+The resulting Docker image runs nginx on port `80`.
 
 > If you'd prefer to build static files instead of using Docker:
 > 
@@ -60,7 +64,7 @@ Follow these instructions to install, build, and verify the web portal.
 3. Follow the prompts to generate an account activation email.
 4. Open the email and complete the account creation and sign in process.
 
->  If you are the very first person to create an account, the system adds the `Team Admin` [team role](../../portal-guide/study-management/role-based-access-control.md) to your account settings. Because this role has advanced access privileges to the Samsung Health Stack, we recommend that your system administrator creates the first account.
+>  If you are the very first person to create an account, the system adds the `Team Admin` [team role](../../portal-guide/study-management/role-based-access-control.md)) to your account settings. Because this role has advanced access privileges to the Samsung Health Stack, we recommend that your system administrator creates the first account.
 
 <!-- The system adds the `Team Member` team role to the account settings of all subsequent accounts upon creation. -->
 
