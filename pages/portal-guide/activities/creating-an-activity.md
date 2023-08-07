@@ -1,9 +1,11 @@
 ---
 title: Creating an Activity
 sidebar: doc_sidebar
-permalink: creating_an_activity.html
+permalink: creating-an-activity.html
 toc: True
 ---
+
+Activities allow researchers to collect specific types of data from users.
 
 1. To create an activity, go to `Study Management` and click `Activities`.![image-20230719131519078](./creating-motor-activity.assets/image-20230719131519078.png)
 
